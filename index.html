@@ -1006,7 +1006,7 @@ header {
       content="Getting you high quality femboys, hiring degenerate femboys, and running from 12!"
       property="twitter:description"
     />
-    <meta content="/assets/img/twitter_wide.png" property="twitter:image" />
+    <meta content="/img/logo.png" property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -1247,10 +1247,10 @@ header {
             <h4>Contact Us</h4>
             <hr class="separator" />
             <i class="fa-solid fa-user custom-icon"></i>
-            <a href="mailto:contact@soaragency.io" bis_skin_checked="1" class="mailto-link">Username: dylandinkdonk</a>
+            <a bis_skin_checked="1" class="mailto-link" onclick="copyUsername(event)" style="cursor: pointer;">Username: dylandinkdonk</a>
             <p></p>
             <i class="fa-solid fa-id-card custom-icon"></i>
-            <a href="tel:8135030767" bis_skin_checked="1" class="mailto-link">User ID: 1298756215681056859</a>
+            <a bis_skin_checked="1" class="mailto-link" onclick="copyUserId(event)" style="cursor: pointer;">User ID: 1298756215681056859</a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -1573,6 +1573,28 @@ header {
         });
       });
     </script>
+    <script>
+        function copyUsername(event) {
+          event.preventDefault();
+          const username = "dylandinkdonk";
+          navigator.clipboard.writeText(username).then(function() {
+            alert("Username copied to clipboard: " + username);
+          }).catch(function(error) {
+            console.error("Failed to copy username: ", error);
+          });
+        }
+      </script>
+       <script>
+        function copyUserId(event) {
+          event.preventDefault();
+          const username = "1298756215681056859";
+          navigator.clipboard.writeText(username).then(function() {
+            alert("Username copied to clipboard: " + username);
+          }).catch(function(error) {
+            console.error("Failed to copy username: ", error);
+          });
+        }
+      </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const easierSpan = document.querySelector(".hero h1 span");
